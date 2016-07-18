@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.weather.WeatherInfoActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="天气信息"
+            android:textColorHint="#545352"
+            android:textColor="#545352"
+            android:id="@+id/weather_tv"
+            />
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/get_weather_btn"
+        android:layout_width="wrap_content"
+        android:text="获取广州天气信息"
+        android:layout_height="wrap_content" />
+</LinearLayout>
