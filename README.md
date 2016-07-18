@@ -29,9 +29,9 @@
 
 >> `WeatherPresenter`定义并实现了对应View 要具体操作的事项。
 
->> `DataCallback`是一个泛型接口，定义要获取的数据类型，在presenter 和 Modle 两层之间解耦。
+>> `DataCallback`是一个泛型接口，定义要获取的数据类型，在presenter 和 Model 两层之间解耦。
 
-> 最右边 `BaseModel`,`WeatherModle`,`ResultCallback` 属于 `model` 层
+> 最右边 `BaseModel`,`WeatherModel`,`ResultCallback` 属于 `model` 层
 
 >> `BaseModel`是所有 Model 的父类。
 
@@ -39,7 +39,7 @@
 
 >> `HttpHelper` 主要是封装了网络请求。
 
->> `ResultCallback`是在modle 层和 http层进行解耦。
+>> `ResultCallback`是在model 层和 http层进行解耦。
 
 在整个设计中，用了两个 interface 来解耦。`ResultCallback`让`httpHelper` 独立出来，让它完全作为一个工具类，只负责发送请求，我们随时可以替换这一层的实现而不会有别的影响。`Datacallback` 让`Model` 变成正在的数据持久层，入参的封装，返回数据的封装，都可以放在这一层，在`Presenter`直接拿到界面想要的 javabean。
 
